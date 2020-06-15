@@ -9,10 +9,7 @@ const bodyParser = require('body-parser');
 const { Client } = require('pg');
 
 const client = new Client({
-  user: 'PerrinJ',
-  host: 'localhost',
   database: 'testdb',
-  port: 5432,
 });
 client.connect();
 console.log(client);
