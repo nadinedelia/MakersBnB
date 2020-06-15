@@ -3,7 +3,9 @@ var router = express.Router();
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
-  res.send(' sign up ');
+  res.render('signup', { title: 'MakersBnB' });
 });
+
+
 
 module.exports = router;

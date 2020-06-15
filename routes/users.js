@@ -6,10 +6,11 @@ router.get('/', function(req, res, next) {
   res.send(' nodemon --exec npm start ');
 });
 
-router.post('handle',(request,response) => {
-    //code to perform particular action.
-    //To access POST variable use req.body()methods.
-    console.log(request.body);
+router.post('/',(request,response) => {
+  //code to perform particular action.
+  //To access POST variable use req.body()methods.
+  console.log(request.body);
+  response.redirect('/users')
 });
 
 module.exports = router;
