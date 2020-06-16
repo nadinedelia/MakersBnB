@@ -11,9 +11,9 @@ router.get('/', function(req, res, next) {
 
 router.post('/',(req,res) => {
 
-  const { Client } = require('pg')
-  const client = new Client()
-  client.connect()
+  const { client } = require('../dbConfig')
+  // const client = new Client()
+  // client.connect()
   client.query("SELECT * FROM users WHERE username = $1", ['elonmusk'], (err, res) => {
     if (err) throw err
     console.log(res)
