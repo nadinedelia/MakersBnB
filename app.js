@@ -6,7 +6,6 @@ var logger = require('morgan');
 const bodyParser = require('body-parser');
 const { client } = require("./dbConfig");
 const { user } = require("./addUsers");
-const { space } = require("./addSpace");
 
 
 var indexRouter = require('./routes/index');
@@ -36,7 +35,7 @@ app.use('/users', usersRouter);
 app.use('/houses', housesRouter);
 app.use('/signup', signupRouter);
 app.use('/newSpace', newSpaceRouter);
-app.use('/space', spacesRouter);
+app.use('/spaces', spacesRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
