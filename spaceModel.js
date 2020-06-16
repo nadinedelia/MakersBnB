@@ -16,13 +16,13 @@ const add = (name) => {
     const text = {
     text: 'SELECT name FROM spaces',
     }
-    client.query(text, (err, res) => {
+    var to_return = client.query(text, (err, res) => {
       if (err) {
         console.log(err.stack);
       } 
-      console.log(res)
-      return res;
+      return res.rows;
     });
+    return to_return;
   };
 
  exports.add = add;
