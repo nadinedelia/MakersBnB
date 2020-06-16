@@ -1,5 +1,6 @@
 var express = require('express');
 var router = express.Router();
+var space  = require("../addSpace");
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
@@ -8,6 +9,7 @@ router.get('/', function(req, res, next) {
 
 router.post('/', function(req, res, next) {
   console.log(req.body);
+  space.spaceAdd(req.body);
   res.redirect('/space')
 });
 

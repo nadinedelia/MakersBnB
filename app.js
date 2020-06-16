@@ -6,6 +6,7 @@ var logger = require('morgan');
 const bodyParser = require('body-parser');
 const { client } = require("./dbConfig");
 const { user } = require("./addUsers");
+const { space } = require("./addSpace");
 
 
 var indexRouter = require('./routes/index');
