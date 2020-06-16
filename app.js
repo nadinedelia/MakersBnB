@@ -20,6 +20,7 @@ var usersRouter = require('./routes/users');
 var housesRouter = require('./routes/houses');
 var signupRouter = require('./routes/signup');
 var newSpaceRouter = require('./routes/newSpace');
+var spacesRouter = require('./routes/spaces')
 
 var app = express();
 
@@ -41,6 +42,7 @@ app.use('/users', usersRouter);
 app.use('/houses', housesRouter);
 app.use('/signup', signupRouter);
 app.use('/newSpace', newSpaceRouter);
+app.use('/space', spacesRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
