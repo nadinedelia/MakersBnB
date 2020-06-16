@@ -13,7 +13,7 @@ router.get('/', function(req, res, next) {
 
 router.post('/',(req,res) => {
 
-user.getName(req.body.first_name, req.body.last_name, req.body.email); //uses addUsers.js module
+user.getName(req.body.first_name, req.body.last_name, req.body.email, req.body.username); //uses addUsers.js module
 //   const text = {
 //     text: 'INSERT INTO users(name, email) VALUES($1, $2) RETURNING id, name, email',
 //     values: [req.body.name, req.body.email],

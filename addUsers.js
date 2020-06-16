@@ -2,10 +2,10 @@ const { client } = require("./dbConfig");
 
 
 
-const getName = (first_name, last_name, email) => {
+const getName = (first_name, last_name, email, username) => {
     const text = {
-        text: 'INSERT INTO users(first_name, last_name, email) VALUES($1, $2, $3) RETURNING id, first_name, last_name, email',
-        values: [first_name, last_name, email],
+        text: 'INSERT INTO users(first_name, last_name, email, username) VALUES($1, $2, $3, $4) RETURNING id, first_name, last_name, email, username',
+        values: [first_name, last_name, email, username],
       }
 
       //code to perform particular action.

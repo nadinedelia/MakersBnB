@@ -1,5 +1,6 @@
 var express = require('express');
 var router = express.Router();
+const { client } = require("../dbConfig");
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
@@ -13,12 +14,13 @@ router.post('/',(req,res) => {
   const { Client } = require('pg')
   const client = new Client()
   client.connect()
-  client.query('SELECT $1::text as first_name', [req.body.username], (err, res) => {
+  client.query("SELECT * FROM users WHERE username = $1", ['elonmusk'], (err, res) => {
     if (err) throw err
     console.log(res)
     client.end()
   })
   console.log(req.body);
+    console.log(res.row);
   res.redirect('/users')
 });
 
