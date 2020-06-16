@@ -9,7 +9,8 @@ router.get('/', function(req, res, next) {
 
 router.post('/', function(req, res, next) {
   console.log(req.body);
-  space.spaceAdd(req.body);
+  console.log(space);
+  space.spaceAdd(req.body.name);
   res.redirect('/space')
 });
 
