@@ -4,16 +4,9 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 const bodyParser = require('body-parser');
+const { client } = require("./dbConfig");
+const { user } = require("./addUsers");
 
-////Database setup.
-const { Client } = require('pg');
-
-const client = new Client({
-  database: 'testdb',
-});
-client.connect();
-//console.log(client);
-////////////
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
