@@ -12,7 +12,7 @@ const client = new Client({
   database: 'testdb',
 });
 client.connect();
-console.log(client);
+//console.log(client);
 ////////////
 
 var indexRouter = require('./routes/index');
