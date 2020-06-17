@@ -12,11 +12,21 @@ const add = (name) => {
     });
   };
 
-  function list() {
+  client.query('SELECT name FROM spaces', (err, res) => {
+    console.log(4)
+    if (err) {
+      console.log(err.stack);
+    } else {
+      console.log(res.rows, 1)
+      return res.rows
+    }
+  });
+
+  async function list() {
     const textList = {
       text: 'SELECT name FROM spaces',
     }
-    client.query(textList, (err, res) => {
+    let output = client.query(textList, (err, res) => {
       console.log(4)
       if (err) {
         console.log(err.stack);
@@ -25,8 +35,8 @@ const add = (name) => {
         return res.rows
       }
     });
-    console.log(2)
-    return ':('
+    let result = await output
+    console.log(result)
   };
 
  exports.add = add;

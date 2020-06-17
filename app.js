@@ -7,6 +7,21 @@ const bodyParser = require('body-parser');
 const { client } = require("./dbConfig");
 const { user } = require("./addUsers");
 
+<<<<<<< HEAD
+=======
+////Database setup.
+const { Client } = require('pg');
+
+const client = new Client({
+  user: 'PerrinJ',
+  host: 'localhost',
+  database: 'testdb',
+  port: 5432,
+});
+client.connect();
+console.log(client);
+////////////
+>>>>>>> parent of a89a605... added migrations folder for creating database and table
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
