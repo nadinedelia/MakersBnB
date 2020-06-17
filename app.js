@@ -19,6 +19,10 @@ var signupRouter = require('./routes/signup');
 var newSpaceRouter = require('./routes/newSpace');
 var spacesRouter = require('./routes/spaces');
 var loginRouter = require('./routes/login');
+
+
+var bookSpaceRouter = require('./routes/bookSpace');
+
 var app = express();
 
 // view engine setup
@@ -41,6 +45,7 @@ app.use('/signup', signupRouter);
 app.use('/newSpace', newSpaceRouter);
 app.use('/spaces', spacesRouter);
 app.use('/login', loginRouter);
+app.use('/book', bookSpaceRouter);
 
 
 // catch 404 and forward to error handler

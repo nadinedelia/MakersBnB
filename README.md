@@ -1,1 +1,1 @@
-spaces test
+remove_spaces test
