@@ -8,21 +8,25 @@ const add = (name) => {
     client.query(text, (err) => {
       if (err) {
         console.log(err.stack);
-      } 
+      }
     });
   };
 
-  const list = () => {
-    const text = {
-    text: 'SELECT name FROM spaces',
+  function list() {
+    const textList = {
+      text: 'SELECT name FROM spaces',
     }
-    var to_return = client.query(text, (err, res) => {
+    client.query(textList, (err, res) => {
+      console.log(4)
       if (err) {
         console.log(err.stack);
-      } 
-      return res.rows;
+      } else {
+        console.log(res.rows, 1)
+        return res.rows
+      }
     });
-    return to_return;
+    console.log(2)
+    return ':('
   };
 
  exports.add = add;

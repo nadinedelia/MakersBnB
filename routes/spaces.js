@@ -6,7 +6,7 @@ var space  = require("../spaceModel");
 router.get('/', function(req, res, next) {
   console.log(space.list())
 
-  res.render('spaces', { 
+  res.render('spaces', {
     title: 'MakersBnB',
     spaces: space.list()
   });
