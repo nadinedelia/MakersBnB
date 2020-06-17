@@ -22,6 +22,11 @@ var app = express();
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 
+app.get('/login', function (req, res) {
+  res.sendFile('./views/login.html', { root: __dirname })
+})
+
+
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
