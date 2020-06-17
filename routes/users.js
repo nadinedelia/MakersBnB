@@ -5,20 +5,20 @@ var user  = require("../addUsers");
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
-  
+
   res.send(' nodemon --exec npm start ');
 });
 
 
 
 router.post('/',(req,res) => {
-  
-user.getName(req.body.name, req.body.email); //uses addUsers.js module
+
+user.getName(req.body.first_name, req.body.last_name, req.body.email, req.body.username, req.body.password); //uses addUsers.js module
 //   const text = {
 //     text: 'INSERT INTO users(name, email) VALUES($1, $2) RETURNING id, name, email',
 //     values: [req.body.name, req.body.email],
 //   }
-  
+
 //   //code to perform particular action.
 //   //To access POST variable use req.body()methods.
 //   client.query(text, (err, res) => {
@@ -29,7 +29,7 @@ user.getName(req.body.name, req.body.email); //uses addUsers.js module
 //     }
 //   });
 //   console.log(req.body);
-//   res.redirect('/users')
+  res.redirect('/users')
 });
 
 module.exports = router;
