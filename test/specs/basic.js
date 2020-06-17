@@ -36,12 +36,12 @@ describe('Sign Up succeeded', () => {
     password.setValue('123');
     const mybutton = $('#button');
     mybutton.click();
-    expect(browser).toHaveUrl('http://localhost:3000/users');
+    expect(browser).toHaveUrl('http://localhost:3000/spaces');
   });
 });
 
 describe('Sucessful login', () => {
-  xit('Moves onto spaces Page', () => {
+  it('Moves onto spaces Page', () => {
     browser.url('/login');
     const username = $('#username');
     const password = $('#password');
