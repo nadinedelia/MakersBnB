@@ -39,6 +39,7 @@ app.use('/newSpace', newSpaceRouter);
 app.use('/spaces', spacesRouter);
 app.use('/login', loginRouter);
 
+
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
   next(createError(404));
