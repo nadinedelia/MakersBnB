@@ -13,7 +13,7 @@ describe('Failed Login', () => {
   });
 });
 
-describe('Sucessful login', () => {
+describe('Successful login', () => {
   it('Moves onto spaces Page', () => {
     browser.url('/login');
     const username = $('#username');
