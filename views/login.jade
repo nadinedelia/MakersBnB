@@ -2,8 +2,8 @@ doctype html
 h1= title
 p Welcome to #{title}
 form(action='/login', method='post')
-  input#username(type='text', name='username', placeholder='Username')
+  input#username(type='text', name='username',  placeholder='Username')
   input#password(type='text', name='password', placeholder='Password')
   br
   br
-  input.button(type='submit', value='Log In')
+  input#button.button(type='submit', name = 'submit', value='Log In')
