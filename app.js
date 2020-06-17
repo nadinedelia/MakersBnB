@@ -2,6 +2,10 @@ var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
+var flash = require('connect-flash');
+var flash = require('express-flash-messages')
+var session = require('express-session')
+
 var logger = require('morgan');
 const bodyParser = require('body-parser');
 const { client } = require("./dbConfig");
@@ -15,6 +19,8 @@ var signupRouter = require('./routes/signup');
 var newSpaceRouter = require('./routes/newSpace');
 var spacesRouter = require('./routes/spaces');
 var loginRouter = require('./routes/login');
+
+
 var bookSpaceRouter = require('./routes/bookSpace');
 
 var app = express();
