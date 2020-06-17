@@ -18,7 +18,5 @@ async function getSpaces() {
 }
 
 
-=======
->>>>>>> 2475516fb03b2ad73287d3fd016eb3df7252f68c
 exports.add = add;
 exports.getSpaces = getSpaces;
