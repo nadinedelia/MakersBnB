@@ -13,7 +13,7 @@ const add = (name) => {
 };
 
 async function getSpaces() {
-  const spaces =  await client.query('SELECT name FROM spaces')
+  const spaces =  await client.query('SELECT id, name FROM spaces')
   return spaces;
 }
 
