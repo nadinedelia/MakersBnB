@@ -6,11 +6,13 @@ const { client } = require("./dbConfig");
       'SELECT * FROM users WHERE username = $1 AND password = $2',
       [username, password],
       (err, response) => {
-        console.log(response.rows.length); ////number of matches. Must be unique.
+         ////number of matches. Must be unique.
         if (response.rows.length === 1) {
+            console.log('LOGIN SUCCESS');
           res.redirect('/spaces'); //if successful redirect to spaces.
         } else {
           res.redirect('/login'); // if unsuccessful redirect to login route. 
+          console.log('LOGIN FAIL');
         }
       }
     );
