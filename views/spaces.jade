@@ -5,5 +5,5 @@ block content
 
   - for (var i=0; i<spaces.length; i++)
     p #{spaces[i].name}
-    form(action='/delete/#{spaces[i].id}', method='post')
+    form(action='/book/#{spaces[i].id}', method='post')
       input.button(type='submit' id='#{spaces[i].id}', value='delete')

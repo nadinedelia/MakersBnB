@@ -12,6 +12,21 @@ const add = (name) => {
   });
 };
 
+const book = function(id) {
+  
+  const text = {
+    text: 'DELETE FROM spaces WHERE id = $1',
+    values: [id],
+  }
+  client.query(text, (err) => {
+    if (err) {
+      console.log(err.stack);
+    }
+  });
+
+}
+
+
 async function getSpaces() {
   const spaces =  await client.query('SELECT id, name FROM spaces')
   return spaces;
@@ -20,3 +35,4 @@ async function getSpaces() {
 
 exports.add = add;
 exports.getSpaces = getSpaces;
+exports.book = book;
