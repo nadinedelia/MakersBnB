@@ -1,9 +1,9 @@
 const { client } = require("./dbConfig");
 
-const add = function(name) {
+const add = function(body) {
   const text = {
-    text: 'INSERT INTO spaces (name) VALUES($1)',
-    values: [name],
+    text: 'INSERT INTO spaces (name, description, price) VALUES($1, $2, $3)',
+    values: [body.name, body.description, body.price],
   }
   client.query(text, (err) => {
     if (err) {
@@ -25,7 +25,7 @@ const book = function(id) {
 }
 
 async function getSpaces() {
-  const spaces =  await client.query('SELECT id, name FROM spaces')
+  const spaces =  await client.query('SELECT * FROM spaces')
   return spaces;
 }
 
