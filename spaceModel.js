@@ -1,6 +1,6 @@
 const { client } = require("./dbConfig");
 
-const add = (name) => {
+const add = function(name) {
   const text = {
     text: 'INSERT INTO spaces (name) VALUES($1)',
     values: [name],
@@ -13,7 +13,6 @@ const add = (name) => {
 };
 
 const book = function(id) {
-  
   const text = {
     text: 'DELETE FROM spaces WHERE id = $1',
     values: [id],
@@ -23,15 +22,12 @@ const book = function(id) {
       console.log(err.stack);
     }
   });
-
 }
-
 
 async function getSpaces() {
   const spaces =  await client.query('SELECT id, name FROM spaces')
   return spaces;
 }
-
 
 exports.add = add;
 exports.getSpaces = getSpaces;
