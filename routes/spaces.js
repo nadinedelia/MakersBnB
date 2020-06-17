@@ -2,8 +2,8 @@ var express = require('express');
 var router = express.Router();
 var space  = require("../spaceModel");
 
-/* GET users listing. */
 router.get('/', function(req, res, next) {
+<<<<<<< HEAD
   var spaces
 
   spaces = space.list()
@@ -15,7 +15,27 @@ router.get('/', function(req, res, next) {
   });
 
 });
+=======
+  
+  // const {Client} = require('pg')
+  // const client = new Client({
+  //   database: 'testdb',
+  // });
+>>>>>>> 9639cc7ea668ad0c79265f1e7e279e269704a6a8
 
+  // async function getSpaces() {
+  //   await client.connect()
+  //   const spaces =  await client.query('SELECT name FROM spaces')
+  //   await client.end()
+  //   return spaces;
+  // }
 
+  space.getSpaces().then(function(spaces) {
+    res.render('spaces', {
+      title: 'MakersBnB',
+      spaces: spaces.rows
+    })
+  })
+});
 
 module.exports = router;

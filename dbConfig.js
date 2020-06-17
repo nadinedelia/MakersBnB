@@ -3,7 +3,7 @@
 const { Client } = require('pg');
 
 const client = new Client({
-  database: 'testdb',
+  database: 'makersbnb',
 });
 client.connect();
 
