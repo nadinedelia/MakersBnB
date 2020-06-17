@@ -8,4 +8,4 @@ block content
     p Description: #{spaces[i].description}
     p Price Per Night: #{spaces[i].price}
     form(action='/book/#{spaces[i].id}', method='post')
-      input.button(type='submit' id='#{spaces[i].id}', value='delete')
+      input.button(type='submit' id='#{spaces[i].id}', value='Book')
