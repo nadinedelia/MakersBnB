@@ -20,25 +20,6 @@ var newSpaceRouter = require('./routes/newSpace');
 var spacesRouter = require('./routes/spaces');
 var loginRouter = require('./routes/login');
 var app = express();
-// app.use(flash());
-// app.use(session({
-//   secret: 'keyboard cat',
-//   resave: false,
-//   saveUninitialized: true,
-//   cookie: { secure: true }
-// }))
-// app.use(function(req, res, next){
-//     res.locals.success_messages = req.flash('success_messages');
-//     res.locals.error_messages = req.flash('error_messages');
-//     next();
-// });
-//
-// app.use(flash());
-// app.get('/all', (req, res) => {
-//   req.flash('message', 'This is a message from the “/” endpoint');
-//   res.redirect('/users')
-// });
-
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
