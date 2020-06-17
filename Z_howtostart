@@ -1,0 +1,3 @@
+nodemon --exec npm start
+
+WHERE username = $1", ['elonmusk']
