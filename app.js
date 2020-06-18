@@ -48,7 +48,9 @@ app.get('/about', function (req, res) {
 // testing session
 app.use(session({
   secret: "Shh, its a secret!",
-  cookie: {}
+  cookie: {},
+  resave: false,
+  saveUninitialized: true
 }));
 
 app.use(logger('dev'));

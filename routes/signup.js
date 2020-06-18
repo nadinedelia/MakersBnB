@@ -16,12 +16,9 @@ router.post('/', (req, res) => {
     req.body.username,
     req.body.password
   ).then( function(user_data) {
-    console.log(user_data.id)
-    console.log(req.session)
     req.session.user = user_data.id;
-    console.log(req.session)
+    res.redirect('/spaces');
   })
-  res.redirect('/spaces');
 });
 
 module.exports = router;
