@@ -1,30 +1,6 @@
-*{
-	padding: 0;
-	margin: 0;
-	box-sizing: border-box;
-}
-
 body{
     font-family: 'Poppins', sans-serif;
-    overflow: hidden;
 }
-
-.main-nav ul {
-  display: flex;
-  margin: 0;
-  list-style: none;
-	text-align: right;
-	padding-left: 75rem;
-	position: absolute;
-
-}
-
-.main-nav a {
-  color: inherit;
-  text-decoration: none;
-  padding: 1rem;
-}
-
 
 .container{
     width: 100vw;
@@ -46,6 +22,7 @@ body{
 	justify-content: flex-start;
 	align-items: center;
 	text-align: center;
+	/* padding-top: 40px; */
 }
 
 .img img{
@@ -56,6 +33,19 @@ form{
 	width: 360px;
 }
 
+input[type=text2] {
+  width: 70%;
+  height: 40px;
+  box-sizing: border-box;
+  padding-bottom: 20px;
+  font-size: 1rem;
+  padding: 2rem;
+	margin: 0.2rem;
+	border: none;
+}
+
+
+
 .login-content img{
     height: 100px;
 }
@@ -64,7 +54,7 @@ form{
 	margin: 15px 0;
 	color: #333;
 	text-transform: uppercase;
-	font-size: 2.9rem;
+	font-size: 2.5rem;
 }
 
 .login-content .input-div{
@@ -79,6 +69,7 @@ form{
 .login-content .input-div.one{
 	margin-top: 0;
 }
+
 
 .i{
 	color: #d9d9d9;
