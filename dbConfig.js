@@ -1,9 +1,10 @@
 ////Database setup.
 
 const { Client } = require('pg');
-
+require('dotenv').config();
+console.log(process.env.DB_NAME);
 const client = new Client({
-  database: 'makersbnb',
+  database: process.env.DB_NAME,
 });
 client.connect();
 
