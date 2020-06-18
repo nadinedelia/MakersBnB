@@ -1,3 +1,4 @@
+process.env.DB_NAME = test;
 describe('Spaces Page', () => {
   it('goes to new space form page', () => {
     browser.url('/spaces');
