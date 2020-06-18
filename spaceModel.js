@@ -24,8 +24,8 @@ const book = function(id) {
   });
 }
 
-async function getSpaces() {
-  const spaces =  await client.query('SELECT * FROM spaces')
+async function getSpaces(id) {
+  const spaces =  await client.query('SELECT * FROM spaces WHERE owner_id <> $1', [id])
   return spaces;
 }
 
