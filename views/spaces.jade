@@ -7,5 +7,5 @@ block content
     p Name: #{spaces[i].name}
     p Description: #{spaces[i].description}
     p Price Per Night: #{spaces[i].price}
-    form(action='/book/#{spaces[i].id}', method='post')
-      input.button(type='submit' id='#{spaces[i].id}', value='Book')
+    form(action='/book', method='post')
+      input.button(type='submit' id='book', value='Book')
