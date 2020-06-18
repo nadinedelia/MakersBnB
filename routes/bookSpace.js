@@ -1,10 +1,12 @@
 var express = require('express');
 var router = express.Router();
-var space  = require("../spaceModel");
+var space = require('../spaceModel');
 
-router.post('/:id', function(req, res, next) {
-  // space.book(req.params.id); change to an add to DB
-  res.redirect('/spaces')
+router.post('/:id', function (req, res, next) {
+  space.booking(req.params.id);
+  space.book(req.params.id);
+
+  res.redirect('/spaces');
 });
 
 router.get('/', function (req, res, next) {
