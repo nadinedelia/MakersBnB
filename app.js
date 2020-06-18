@@ -45,6 +45,12 @@ app.get('/about', function (req, res) {
   res.sendFile('./views/about.html', { root: __dirname })
 })
 
+// testing session
+app.use(session({
+  secret: "Shh, its a secret!",
+  cookie: {}
+}));
+
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -62,7 +68,6 @@ app.use('/newSpace', newSpaceRouter);
 app.use('/spaces', spacesRouter);
 app.use('/login', loginRouter);
 app.use('/book', bookSpaceRouter);
-
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
