@@ -8,5 +8,6 @@ block content
     p Name: #{spaces[i].name}
     p Description: #{spaces[i].description}
     p Price Per Night: #{spaces[i].price}
+    p Date Avliable: #{spaces[i].date}
     form(action='/book/#{spaces[i].id}', method='post')
       input.button(type='submit' id='#{spaces[i].id}', value='Book')
