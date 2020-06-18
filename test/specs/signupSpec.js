@@ -2,7 +2,7 @@ describe('Index page displays title', () => {
   it('Makers BnB', () => {
     browser.url('/');
     const title = browser.getTitle();
-    expect(browser).toHaveTitle('MakersBnB');
+    expect(browser).toHaveTitle('Welcome to MakersBnB');
   });
 });
 
