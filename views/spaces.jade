@@ -1,7 +1,7 @@
 doctype html
 block content
   form(action='/newSpace', method='get')
-    input.button(type='submit', value='List a New Space')
+    input#button.button(type='submit', value='List a New Space')
 
   - for (var i=0; i<spaces.length; i++)
     p Name: #{spaces[i].name}
