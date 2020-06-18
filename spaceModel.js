@@ -32,7 +32,7 @@ async function getSpaces() {
 async function getDates(id) {
   console.log(id)
   const dates =  await client.query('SELECT * FROM spaces WHERE id = $1', [id])
-  console.log(dates)
+  console.log(dates.rows)
   return dates.rows[0];
 }
 

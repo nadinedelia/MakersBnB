@@ -42,9 +42,9 @@ app.get('/about', function (req, res) {
   res.sendFile('./views/about.html', { root: __dirname });
 });
 
-app.get('/book', function (req, res) {
-  res.sendFile('./views/bookingpage.html', { root: __dirname });
-});
+// app.get('/book', function (req, res) {
+//   res.sendFile('./views/bookingpage.html', { root: __dirname });
+// });
 
 app.use(logger('dev'));
 app.use(express.json());

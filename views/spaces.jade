@@ -8,4 +8,5 @@ block content
     p Description: #{spaces[i].description}
     p Price Per Night: #{spaces[i].price}
     form(action='/book', method='post')
+      input(type='hidden', name='id' value='#{spaces[i].id}')
       input.button(type='submit' id='book', value='Book')
