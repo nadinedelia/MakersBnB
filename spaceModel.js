@@ -1,9 +1,9 @@
 const { client } = require("./dbConfig");
 
-const add = function(body) {
+const add = function(body, owner) {
   const text = {
-    text: 'INSERT INTO spaces (name, description, price) VALUES($1, $2, $3)',
-    values: [body.name, body.description, body.price],
+    text: 'INSERT INTO spaces (name, description, price, owner_id) VALUES($1, $2, $3, $4)',
+    values: [body.name, body.description, body.price, owner],
   }
   client.query(text, (err) => {
     if (err) {

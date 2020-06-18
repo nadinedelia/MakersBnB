@@ -15,9 +15,11 @@ router.post('/', (req, res) => {
     req.body.email,
     req.body.username,
     req.body.password
-  ); //uses addUsers.js module
-
-  res.redirect('/spaces');
+  ).then( function(user_data) {
+    req.session.user = user_data.id;
+    req.session.firstName = user_data.first_name;
+    res.redirect('/spaces');
+  })
 });
 
 module.exports = router;
