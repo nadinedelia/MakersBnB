@@ -6,6 +6,7 @@ router.get('/', function(req, res, next) {
   space.getSpaces().then(function(spaces) {
     res.render('spaces', {
       title: 'MakersBnB',
+      name: req.session.firstName,
       spaces: spaces.rows
     })
   })
