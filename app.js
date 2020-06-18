@@ -18,7 +18,6 @@ var signupRouter = require('./routes/signup');
 var newSpaceRouter = require('./routes/newSpace');
 var spacesRouter = require('./routes/spaces');
 var loginRouter = require('./routes/login');
-
 var bookRouter = require('./routes/book');
 
 var app = express();
@@ -41,6 +40,10 @@ app.get('/signup', function (req, res) {
 
 app.get('/about', function (req, res) {
   res.sendFile('./views/about.html', { root: __dirname });
+});
+
+app.get('/bookingpage', function (req, res) {
+  res.sendFile('./views/bookingpage.html', { root: __dirname });
 });
 
 app.use(logger('dev'));
