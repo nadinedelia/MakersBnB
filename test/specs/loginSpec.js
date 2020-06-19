@@ -1,13 +1,6 @@
 const helper = require('../../test_helper.js');
 describe('Failed Login from login page', () => {
   it('Remains on login page', () => {
-    helper.fillUsersTable(
-      'Jack',
-      'Perrin',
-      'jack@makers.com',
-      'Pezzer',
-      'LTFC'
-    );
     browser.url('/login');
     const username = $('#username');
     const password = $('#password');
@@ -21,14 +14,7 @@ describe('Failed Login from login page', () => {
 
 describe('Successful login from login page', () => {
   it('Moves onto spaces Page', () => {
-    helper.fillUsersTable(
-      'jack',
-      'Perrin',
-      'jack@makers.com',
-      'Pezzer101',
-      'LutonTownFC'
-    );
-    browser.url('/login');
+    browser.url('/login')
     const username = $('#username');
     const password = $('#password');
     username.setValue('Pezzer101'); // fill in username and password fields.
@@ -41,13 +27,6 @@ describe('Successful login from login page', () => {
 
 describe('Failed Login from homepage', () => {
   it('Remains on login page', () => {
-    helper.fillUsersTable(
-      'Jack',
-      'Perrin',
-      'jack@makers.com',
-      'Pezzer',
-      'LTFC'
-    );
     browser.url('/');
     const username = $('#username');
     const password = $('#password');

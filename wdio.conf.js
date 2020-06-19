@@ -194,6 +194,13 @@ exports.config = {
   beforeTest: function (test, context) {
     const helper = require('./test_helper.js');
     helper.clearTestDb();
+    helper.fillUsersTable(
+      'jack',
+      'Perrin',
+      'jack@makers.com',
+      'Pezzer101',
+      'LutonTownFC'
+    );
   },
   /**
    * Hook that gets executed _before_ a hook within the suite starts (e.g. runs before calling
