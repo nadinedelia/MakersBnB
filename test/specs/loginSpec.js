@@ -1,4 +1,4 @@
-process.env.DB_NAME = test;
+
 describe('Failed Login', () => {
   it('Remains on login page', () => {
     browser.url('/login');

@@ -1,4 +1,4 @@
-process.env.DB_NAME = test;
+
 describe('Index page displays title', () => {
   it('Makers BnB', () => {
     browser.url('/');
