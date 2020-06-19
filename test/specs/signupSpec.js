@@ -1,4 +1,4 @@
-
+const helper = require('../../test_helper.js');
 describe('Index page displays title', () => {
   it('Makers BnB', () => {
     browser.url('/');
@@ -9,6 +9,7 @@ describe('Index page displays title', () => {
 
 describe('Sign Up succeeded', () => {
   it('Remains on signup page', () => {
+    
     browser.url('/signup');
     const first_name = $('#first_name');
     const last_name = $('#last_name');
@@ -19,7 +20,7 @@ describe('Sign Up succeeded', () => {
     last_name.setValue('Trump');
     email.setValue('donald@trump.com');
     username.setValue('TheRealDonald'); // fill in username and password fields.
-    password.setValue('123');
+    password.setValue('GretaThunberg');
     const mybutton = $('#button');
     mybutton.click();
     expect(browser).toHaveUrl('http://localhost:3000/spaces');
