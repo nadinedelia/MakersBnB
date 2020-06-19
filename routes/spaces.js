@@ -3,7 +3,7 @@ var router = express.Router();
 var space  = require("../spaceModel");
 
 router.get('/', function(req, res, next) {
-  space.getSpaces().then(function(spaces) {
+  space.getSpaces(req.session.user).then(function(spaces) {
     res.render('spaces', {
       title: 'MakersBnB',
       name: req.session.firstName,
