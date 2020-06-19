@@ -38,7 +38,7 @@ a:hover{
 
 .btn{
 	display: block;
-	width: 100%;
+	width: 30%;
 	height: 50px;
 	border-radius: 25px;
 	outline: none;
@@ -57,6 +57,7 @@ a:hover{
 	background-position: right;
 }
 
+/*
 
 @media screen and (max-width: 1050px){
 	.container{
@@ -84,11 +85,8 @@ a:hover{
 		grid-template-columns: 1fr;
 	}
 
+*/
 	.img{
-		display: none;
-	}
-
-	.wave{
 		display: none;
 	}
 
@@ -100,3 +98,5 @@ a:hover{
 h3 {
 	font-size: 2rem;
 }
+
+p {indent-text: 5em;}
