@@ -18,7 +18,7 @@ const booking = (id) => {
     console.log(response.rows[0]);
     const text = {
       text: 'INSERT INTO bookings (name, space_id, date) VALUES($1, $2, $3)',
-      values: [response.rows[0].name, response.rows[0].id, response.rows[0].dates],
+      values: [response.rows[0].name, response.rows[0].id, response.rows[0].date],
     };
     client.query(text, (err) => {
       if (err) {
