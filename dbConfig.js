@@ -11,7 +11,7 @@ if (process.env.ENV === 'test') {
   });
 } else {
   var client = new Client({
-    database: process.env.DB_NAME_TEST,
+    database: process.env.DB_NAME,
   });
 }
 
