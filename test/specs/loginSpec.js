@@ -1,5 +1,5 @@
 const helper = require('../../test_helper.js');
-describe('Failed Login', () => {
+describe('Failed Login from login page', () => {
   it('Remains on login page', () => {
     helper.fillUsersTable(
       'Jack',
@@ -15,13 +15,11 @@ describe('Failed Login', () => {
     password.setValue('molly1234');
     const mybutton = $('#button');
     mybutton.click();
-    var url = browser.getUrl();
-    console.log('url');
     expect(browser).toHaveUrl('http://localhost:3000/login');
   });
 });
 
-describe('Successful login', () => {
+describe('Successful login from login page', () => {
   it('Moves onto spaces Page', () => {
     helper.fillUsersTable(
       'jack',
@@ -38,5 +36,25 @@ describe('Successful login', () => {
     const mybutton = $('#button');
     mybutton.click();
     expect(browser).toHaveUrl('http://localhost:3000/spaces');
+  });
+});
+
+describe('Failed Login from homepage', () => {
+  it('Remains on login page', () => {
+    helper.fillUsersTable(
+      'Jack',
+      'Perrin',
+      'jack@makers.com',
+      'Pezzer',
+      'LTFC'
+    );
+    browser.url('/');
+    const username = $('#username');
+    const password = $('#password');
+    username.setValue('MileyCyrus');
+    password.setValue('molly1234');
+    const mybutton = $('#button');
+    mybutton.click();
+    expect(browser).toHaveUrl('http://localhost:3000/login');
   });
 });
