@@ -1,3 +1,4 @@
+
 describe('Index page displays title', () => {
   it('Makers BnB', () => {
     browser.url('/');
