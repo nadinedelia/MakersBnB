@@ -31,9 +31,9 @@
 	    </ul>
 </div>
 			<form action="/login" method="post">
-			   <input type="text" id="username" name="username" placeholder="Username"/>
-			   <input type="password" id="password" name="password" placeholder="Password"/>
-			   <input type="submit" class="button" id = "button" value="Login">
+			   <input type="text" id="username" name="username" placeholder="Username" required/>
+			   <input type="password" id="password" name="password" placeholder="Password" minlength="6" required/>
+			   <input type="submit" id='button' class="button" value="Login">
 			 </form>
 
 	  </div>
