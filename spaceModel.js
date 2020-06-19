@@ -13,12 +13,11 @@ const add = function (body, owner) {
   });
 };
 
-const booking = (id) => {
-  client.query('SELECT * FROM spaces WHERE id = $1', [id], (err, response) => {
-    console.log(response.rows[0]);
+async function booking(space_id, user_id) {
+  await client.query('SELECT * FROM spaces WHERE id = $1', [space_id], (err, response) => {
     const text = {
-      text: 'INSERT INTO bookings (name, space_id, date) VALUES($1, $2, $3)',
-      values: [response.rows[0].name, response.rows[0].id, response.rows[0].dates],
+      text: 'INSERT INTO bookings (space_id, date, requester_id) VALUES($1, $2, $3)',
+      values: [response.rows[0].id, response.rows[0].date, user_id],
     };
     client.query(text, (err) => {
       if (err) {
@@ -28,7 +27,7 @@ const booking = (id) => {
   });
 };
 
-const book = function (id) {
+async function book(id) {
   const text = {
     text: 'DELETE FROM spaces WHERE id = $1',
     values: [id],
@@ -45,13 +44,15 @@ async function getSpaces(id) {
   return spaces;
 }
 
+/*
 async function getDates(id) {
   const dates =  await client.query('SELECT * FROM spaces WHERE id = $1', [id])
   return dates.rows[0];
 }
+*/
 
 exports.booking = booking;
 exports.add = add;
 exports.getSpaces = getSpaces;
-exports.getDates = getDates;
+//exports.getDates = getDates;
 exports.book = book;
