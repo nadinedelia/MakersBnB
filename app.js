@@ -29,9 +29,25 @@ var app = express();
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
-app.get('/about', function (req, res) {
-  res.sendFile('./views/about.html', { root: __dirname })
-})
+// app.get('/index', function (req, res) {
+//   res.sendFile('./views/index.html', { root: __dirname })
+// })
+//
+// app.get('/about', function (req, res) {
+//   res.sendFile('./views/about.html', { root: __dirname })
+// })
+//
+// app.get('/login', function (req, res) {
+//   res.sendFile('./views/login.html', { root: __dirname })
+// })
+//
+// app.get('/signup', function (req, res) {
+//   res.sendFile('./views/signup.html', { root: __dirname })
+// })
+//
+// app.get('/newSpace', function (req, res) {
+//   res.sendFile('./views/newSpace.html', { root: __dirname })
+// })
 
 // testing session
 app.use(session({
