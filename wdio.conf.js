@@ -199,7 +199,22 @@ exports.config = {
       'Perrin',
       'jack@makers.com',
       'Pezzer101',
-      'LutonTownFC'
+      'LutonTownFC',
+      '9999'
+    );
+    helper.fillSpacesTable(
+      'Space 1',
+      'A space',
+      '9945.67',
+      '9999',
+      '23'
+    );
+    helper.fillSpacesTable(
+      'Space 2',
+      'A space',
+      '8763.67',
+      '9998',
+      '21'
     );
   },
   /**
