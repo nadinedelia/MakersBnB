@@ -14,9 +14,7 @@ const add = function (body, owner) {
 };
 
 async function booking(space_id, user_id) {
-  console.log("this is booking")
   await client.query('SELECT * FROM spaces WHERE id = $1', [space_id], (err, response) => {
-    console.log("this is booking after await")
     const text = {
       text: 'INSERT INTO bookings (space_id, date, requester_id) VALUES($1, $2, $3)',
       values: [response.rows[0].id, response.rows[0].date, user_id],
@@ -30,13 +28,11 @@ async function booking(space_id, user_id) {
 };
 
 async function book(id) {
-  console.log("this is book")
   const text = {
     text: 'DELETE FROM spaces WHERE id = $1',
     values: [id],
   };
   client.query(text, (err) => {
-    console.log("this is book after await")
     if (err) {
       console.log(err.stack);
     }
