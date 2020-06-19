@@ -44,13 +44,15 @@ async function getSpaces(id) {
   return spaces;
 }
 
+/*
 async function getDates(id) {
   const dates =  await client.query('SELECT * FROM spaces WHERE id = $1', [id])
   return dates.rows[0];
 }
+*/
 
 exports.booking = booking;
 exports.add = add;
 exports.getSpaces = getSpaces;
-exports.getDates = getDates;
+//exports.getDates = getDates;
 exports.book = book;
