@@ -1,5 +1,4 @@
 exports.config = {
-  
   //
   // ====================
   // Runner Configuration
@@ -192,8 +191,10 @@ exports.config = {
   /**
    * Function to be executed before a test (in Mocha/Jasmine) starts.
    */
-  // beforeTest: function (test, context) {
-  // },
+  beforeTest: function (test, context) {
+    const helper = require('./test_helper.js');
+    helper.clearTestDb();
+  },
   /**
    * Hook that gets executed _before_ a hook within the suite starts (e.g. runs before calling
    * beforeEach in Mocha)
