@@ -19,6 +19,7 @@ var signupRouter = require('./routes/signup');
 var newSpaceRouter = require('./routes/newSpace');
 var spacesRouter = require('./routes/spaces');
 var loginRouter = require('./routes/login');
+var requestsRouter = require('./routes/requests');
 
 var bookSpaceRouter = require('./routes/bookSpace');
 
@@ -60,6 +61,7 @@ app.use('/newSpace', newSpaceRouter);
 app.use('/spaces', spacesRouter);
 app.use('/login', loginRouter);
 app.use('/book', bookSpaceRouter);
+app.use('/requests', requestsRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

@@ -44,15 +44,18 @@ async function getSpaces(id) {
   return spaces;
 }
 
-/*
-async function getDates(id) {
-  const dates =  await client.query('SELECT * FROM spaces WHERE id = $1', [id])
-  return dates.rows[0];
+async function getRequests(owner_id) {
+  spaces_query = `SELECT id FROM spaces WHERE owner_id = ${owner_id}`
+  const requests =  await client.query(`SELECT * FROM bookings WHERE space_id IN (${spaces_query})`)
+  return requests.rows;
 }
-*/
+
+
+
 
 exports.booking = booking;
 exports.add = add;
 exports.getSpaces = getSpaces;
+exports.getRequests = getRequests;
 //exports.getDates = getDates;
 exports.book = book;
