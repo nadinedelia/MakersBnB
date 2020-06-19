@@ -39,19 +39,18 @@
       </div>
       <div class="login-content">
 
-        <form action="/newSpace" method="post">
+
+        <form action="/newSpace" method="get">
           <h2 class="title">List a new space</h2>
-          <input id="name" type="text" name="name" placeholder="Name of Space"><br>
-          <input id="description" type="text" name="description" placeholder="Description of Space"><br>
-          <input id="price" type="number" name="price" step="0.01" placeholder="Price Per Night of Space"><br>
-          <input id="date" type="number" name="date" placeholder="Date of Booking"><br><br>
           <input id="button" class='btn' type="submit" value="List Space">
         </form>
 
 
          <% for (var i=0; i<spaces.length; i++) {%>
-        Name: <%= spaces[i].name %> Description: <%= spaces[i].description %> Price
-        Per Night: <%= spaces[i].price %> <%}%>
+        Name: <%= spaces[i].name %> <br>
+        Description: <%= spaces[i].description %> <br>
+        Price Per Night: <%= spaces[i].price %> <br>
+        Date Available: <%= spaces[i].dtae %> <%}%> <br><br>
   </spaces.length;>
 
       </div>
