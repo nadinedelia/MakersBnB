@@ -13,12 +13,12 @@ const add = function (body, owner) {
   });
 };
 
-const booking = (id) => {
-  client.query('SELECT * FROM spaces WHERE id = $1', [id], (err, response) => {
+const booking = (space_id, user_id) => {
+  client.query('SELECT * FROM spaces WHERE id = $1', [space_id], (err, response) => {
     console.log(response.rows[0]);
     const text = {
-      text: 'INSERT INTO bookings (name, space_id, date) VALUES($1, $2, $3)',
-      values: [response.rows[0].name, response.rows[0].id, response.rows[0].date],
+      text: 'INSERT INTO bookings (space_id, date, requester_id) VALUES($1, $2, $3)',
+      values: [response.rows[0].id, response.rows[0].date, user_id],
     };
     client.query(text, (err) => {
       if (err) {
