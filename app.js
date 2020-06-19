@@ -29,7 +29,6 @@ app.set('views', path.join(__dirname, 'views'));
 
 app.set('view engine', 'ejs');
 
-
 app.get('/about', function (req, res) {
   res.sendFile('./views/about.html', { root: __dirname });
 });

@@ -3,9 +3,8 @@ var router = express.Router();
 var space = require('../spaceModel');
 
 router.post('/:id', function (req, res, next) {
-  space.booking(req.params.id);
+  //space.booking(req.params.id);
   space.book(req.params.id);
-
   res.redirect('/spaces');
 });
 
