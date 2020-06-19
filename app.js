@@ -33,9 +33,9 @@ app.set('view engine', 'ejs');
 //   res.sendFile('./views/index.html', { root: __dirname })
 // })
 //
-// app.get('/about', function (req, res) {
-//   res.sendFile('./views/about.html', { root: __dirname })
-// })
+app.get('/about', function (req, res) {
+  res.sendFile('./views/about.html', { root: __dirname })
+})
 //
 // app.get('/login', function (req, res) {
 //   res.sendFile('./views/login.html', { root: __dirname })
