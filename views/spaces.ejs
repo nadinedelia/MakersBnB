@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Book a space</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" />
+  <link rel="stylesheet" type="text/css" href="stylesheets/style3.css" />
+  <link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/a81368914c.js"></script>
+  <script src="https://kit.fontawesome.com/7e66e4edcc.js" crossorigin="anonymous"></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+</head>
+
+<body>
+  <div class="sticky-top">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="/"><img src="img/logosmall.png" class="brand-logo" /></a>
+
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        <li class="nav-item active">
+          <a class="nav-link" href="/login">Login<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/about">About</a>
+        </li>
+      </ul>
+</div>
+    </div>
+
+  <div class="row">
+    <div class="container">
+      <div class="img">
+        <img src="img/sofa.jpeg" />
+      </div>
+      <div class="login-content">
+
+
+        <form action="/newSpace" method="get">
+          <h2 class="title">List a new space</h2>
+          <input id="button" class='btn' type="submit" value="List Space">
+        </form>
+
+
+         <% for (var i=0; i<spaces.length; i++) {%>
+        Name: <%= spaces[i].name %> <br>
+        Description: <%= spaces[i].description %> <br>
+        Price Per Night: <%= spaces[i].price %> <br>
+        Date Available: <%= spaces[i].dtae %> <%}%> <br><br>
+  </spaces.length;>
+
+      </div>
+
+
+<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>
