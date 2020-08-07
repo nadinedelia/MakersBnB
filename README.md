@@ -8,7 +8,7 @@ To create a basic clone of AirBnb in a team using a Javascript frontend and Node
 
 ## Screen recording – Signup & Login
 
-[Click here]()
+![](img/makersbnb.gif)
 
 ## How To Use
 
