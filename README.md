@@ -1,6 +1,7 @@
 # Welcome to MakersBnB
 
 ![](https://i.imgur.com/ox2z9rf.png)
+![](public/img/houses.png)
 
 ## Project Aim
 
@@ -9,6 +10,7 @@ To create a basic clone of AirBnb in a team using a Javascript frontend and Node
 ## Screen recording – Signup & Login
 
 ![](public/img/makersbnb.gif)
+![](public/img/login.png)
 
 ## How To Use
 
